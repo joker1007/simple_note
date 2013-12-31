@@ -15,4 +15,5 @@
 //= require bootstrap-sass
 //= require underscore
 //= require backbone
+//= require simple_note
 //= require_tree .

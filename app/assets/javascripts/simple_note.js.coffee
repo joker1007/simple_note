@@ -8,5 +8,3 @@ window.SimpleNote =
   init: ->
     console.log 'init SimpleNote!'
 
-$ ->
-  SimpleNote.init();
