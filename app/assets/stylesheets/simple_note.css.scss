@@ -1,3 +1,32 @@
 #main {
   margin-top: 60px;
 }
+
+#notes {
+  .note {
+    width: 320px;
+    min-height: 200px;
+    max-height: 400px;
+
+    display: inline-block;
+    list-style-type: none;
+    border: 2px solid #111;
+    border-radius: 10px 10px 10px 10px;
+
+    margin-left: 4px;
+    margin-right: 4px;
+
+    padding: 8px;
+
+    .note-title {
+      font-size: 140%;
+      font-weight: bold;
+      display: block;
+    }
+
+    .note-preview {
+      margin-top: 4px;
+      color: #888;
+    }
+  }
+}

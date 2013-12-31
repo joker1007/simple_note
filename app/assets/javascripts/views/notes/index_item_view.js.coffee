@@ -15,7 +15,9 @@ s.Views.Notes.IndexItemView = Backbone.View.extend
     'click a' : 'navigateToNote'
 
   render: ->
-    @$el.html(@template(@model.toJSON()))
+    context = @model.toJSON()
+    _.extend(context, previewText: @model.previewText())
+    @$el.html(@template(context))
     this
 
   navigateToNote: (e) ->
