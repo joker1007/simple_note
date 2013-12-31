@@ -6,7 +6,7 @@ s.Routers.NoteRouter = Backbone.Router.extend
   routes:
     "notes/:id" : "showNote"
     "notes" : "indexNotes"
-    "" : "indexNotes"
+    ".*" : "indexNotes"
 
   indexNotes: ->
     @notes ||= new s.Collections.NoteCollection()
