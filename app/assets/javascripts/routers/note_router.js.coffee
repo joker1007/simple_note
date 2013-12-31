@@ -4,10 +4,11 @@ s = window.SimpleNote
 
 s.Routers.NoteRouter = Backbone.Router.extend
   routes:
-    "notes/:id" : "show_note"
-    "notes" : "index_notes"
-    "" : "index_notes"
+    "notes/:id" : "showNote"
+    "notes" : "indexNotes"
+    "" : "indexNotes"
 
-  index_notes: ->
+  indexNotes: ->
     @notes ||= new s.Collections.NoteCollection()
-    @notes.fetch()
+    @currentView = new s.Views.Notes.IndexView(collection: @notes)
+    @notes.fetch(reset: true)
