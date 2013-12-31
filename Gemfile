@@ -56,6 +56,8 @@ gem 'rails-assets-bootstrap-sass'
 gem 'rails-assets-underscore'
 gem 'rails-assets-backbone'
 
+gem 'handlebars_assets'
+
 group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
