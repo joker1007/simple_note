@@ -49,6 +49,9 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'pry-rails'
+gem 'awesome_print'
+
 gem 'rails-assets-bootstrap-sass'
 gem 'rails-assets-underscore'
 gem 'rails-assets-backbone'
@@ -58,4 +61,5 @@ group :development, :test do
   gem 'capybara'
   gem 'poltergeist'
   gem 'factory_girl_rails'
+  gem 'byebug'
 end
