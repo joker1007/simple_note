@@ -50,6 +50,7 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'rails-assets-bootstrap-sass'
+gem 'rails-assets-underscore'
 gem 'rails-assets-backbone'
 
 group :development, :test do

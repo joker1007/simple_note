@@ -12,4 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap-sass
+//= require underscore
+//= require backbone
 //= require_tree .

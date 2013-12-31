@@ -101,6 +101,7 @@ GEM
     rails-assets-bootstrap-sass (3.0.2)
       rails-assets-jquery (>= 1.9.0)
     rails-assets-jquery (2.0.3)
+    rails-assets-underscore (1.5.2)
     railties (4.1.0.beta1)
       actionpack (= 4.1.0.beta1)
       activesupport (= 4.1.0.beta1)
@@ -170,6 +171,7 @@ DEPENDENCIES
   rails (= 4.1.0.beta1)
   rails-assets-backbone
   rails-assets-bootstrap-sass
+  rails-assets-underscore
   rspec-rails
   sass-rails (~> 4.0.0.rc1)
   sdoc
