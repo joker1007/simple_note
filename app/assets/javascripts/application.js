@@ -15,6 +15,7 @@
 //= require bootstrap-sass
 //= require underscore
 //= require backbone
+//= require backbone.stickit/backbone.stickit
 //= require handlebars.runtime
 //= require simple_note
 //= require_tree .

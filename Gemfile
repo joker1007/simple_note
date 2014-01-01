@@ -55,6 +55,7 @@ gem 'awesome_print'
 gem 'rails-assets-bootstrap-sass'
 gem 'rails-assets-underscore'
 gem 'rails-assets-backbone'
+gem 'rails-assets-backbone.stickit'
 
 gem 'handlebars_assets'
 

@@ -117,6 +117,7 @@ GEM
       railties (= 4.1.0.beta1)
       sprockets-rails (~> 2.0.0)
     rails-assets-backbone (1.1.0)
+    rails-assets-backbone.stickit (0.7.0)
     rails-assets-bootstrap-sass (3.0.2)
       rails-assets-jquery (>= 1.9.0)
     rails-assets-jquery (2.0.3)
@@ -194,6 +195,7 @@ DEPENDENCIES
   pry-rails
   rails (= 4.1.0.beta1)
   rails-assets-backbone
+  rails-assets-backbone.stickit
   rails-assets-bootstrap-sass
   rails-assets-underscore
   rspec-rails
