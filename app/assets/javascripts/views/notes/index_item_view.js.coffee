@@ -12,7 +12,8 @@ s.Views.Notes.IndexItemView = Backbone.View.extend
   template: JST['notes/index_item']
 
   events:
-    'click a' : 'navigateToNote'
+    'click .note-title' : 'navigateToNote'
+    'click .delete-note' : 'deleteNote'
 
   render: ->
     context = @model.toJSON()
@@ -24,3 +25,8 @@ s.Views.Notes.IndexItemView = Backbone.View.extend
     e.preventDefault()
     Backbone.history.navigate("notes/#{@model.id}", true)
 
+  deleteNote: (e) ->
+    e.preventDefault()
+    if confirm('ノートを削除しますか？')
+      @model.destroy().done =>
+        @remove()

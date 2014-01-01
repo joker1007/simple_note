@@ -1,4 +1,5 @@
 %h3
   %a.note-title{href: '{{url}}'} {{title}}
+  %a.delete-note.glyphicon.glyphicon-trash{href: '#'}
 .note-preview
   {{previewText}}
