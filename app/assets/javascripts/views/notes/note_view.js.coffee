@@ -5,9 +5,9 @@ window.SimpleNote ?=
 s = window.SimpleNote
 s.Views.Notes ?= {}
 
-s.Views.Notes.NewView = Backbone.View.extend
+s.Views.Notes.NoteView = Backbone.View.extend
   className: 'new-note'
-  template: JST['notes/new']
+  template: JST['notes/note']
 
   events:
     'click .submit-note-form' : 'submit'
@@ -17,6 +17,8 @@ s.Views.Notes.NewView = Backbone.View.extend
     '#input-note-raw_body' : 'raw_body'
 
   render: ->
+    console.log @model
+    console.log @model.toJSON()
     @$el.html(@template(@model.toJSON()))
     $('#main').html(@el)
     @stickit()

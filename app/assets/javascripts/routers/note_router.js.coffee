@@ -10,15 +10,26 @@ s.Routers.NoteRouter = Backbone.Router.extend
     ".*" : "indexNotes"
 
   indexNotes: ->
-    @notes ||= new s.Collections.NoteCollection()
     @currentView.remove() if @currentView
+
+    @notes ||= new s.Collections.NoteCollection()
     @currentView = new s.Views.Notes.IndexView(collection: @notes)
     @notes.fetch(reset: true)
 
   newNote: ->
-    @note = new s.Models.Note()
     @currentView.remove() if @currentView
-    @currentView = new s.Views.Notes.NewView(model: @note)
+
+    @note = new s.Models.Note()
+    @currentView = new s.Views.Notes.NoteView(model: @note)
+    @listenTo @currentView, 'clickSubmit', =>
+      @note.save()
+    @currentView.render()
+
+  showNote: (id) ->
+    @currentView.remove() if @currentView
+
+    @note = @notes.get(id)
+    @currentView = new s.Views.Notes.NoteView(model: @note)
     @listenTo @currentView, 'clickSubmit', =>
       @note.save()
     @currentView.render()
