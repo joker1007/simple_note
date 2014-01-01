@@ -51,6 +51,7 @@ gem 'spring',        group: :development
 
 gem 'pry-rails'
 gem 'awesome_print'
+gem 'tapp'
 
 gem 'rails-assets-bootstrap-sass'
 gem 'rails-assets-underscore'
