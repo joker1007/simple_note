@@ -9,6 +9,9 @@ s.Views.Notes.NewView = Backbone.View.extend
   className: 'new-note'
   template: JST['notes/new']
 
+  events:
+    'click .submit-note-form' : 'submit'
+
   bindings:
     '#input-note-title' : 'title'
     '#input-note-raw_body' : 'raw_body'
@@ -18,3 +21,8 @@ s.Views.Notes.NewView = Backbone.View.extend
     $('#main').html(@el)
     @stickit()
     this
+
+  submit: (e) ->
+    e.preventDefault()
+    @trigger('clickSubmit')
+

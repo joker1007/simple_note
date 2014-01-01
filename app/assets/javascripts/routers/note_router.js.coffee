@@ -19,4 +19,6 @@ s.Routers.NoteRouter = Backbone.Router.extend
     @note = new s.Models.Note()
     @currentView.remove() if @currentView
     @currentView = new s.Views.Notes.NewView(model: @note)
+    @listenTo @currentView, 'clickSubmit', =>
+      @note.save()
     @currentView.render()
