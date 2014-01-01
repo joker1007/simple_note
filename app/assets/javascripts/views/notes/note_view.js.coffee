@@ -17,8 +17,6 @@ s.Views.Notes.NoteView = Backbone.View.extend
     '#input-note-raw_body' : 'raw_body'
 
   render: ->
-    console.log @model
-    console.log @model.toJSON()
     @$el.html(@template(@model.toJSON()))
     $('#main').html(@el)
     @stickit()
