@@ -59,6 +59,8 @@ gem 'rails-assets-backbone.stickit'
 
 gem 'handlebars_assets'
 
+gem 'redcarpet'
+
 group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'

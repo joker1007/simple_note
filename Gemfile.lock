@@ -130,6 +130,7 @@ GEM
     rake (10.1.1)
     rdoc (3.12.2)
       json (~> 1.4)
+    redcarpet (3.0.0)
     rspec-core (2.14.7)
     rspec-expectations (2.14.4)
       diff-lcs (>= 1.1.3, < 2.0)
@@ -198,6 +199,7 @@ DEPENDENCIES
   rails-assets-backbone.stickit
   rails-assets-bootstrap-sass
   rails-assets-underscore
+  redcarpet
   rspec-rails
   sass-rails (~> 4.0.0.rc1)
   sdoc
