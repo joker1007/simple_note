@@ -3,6 +3,8 @@
 }
 
 #notes {
+  padding: 0;
+
   .note {
     width: 320px;
     min-height: 200px;
@@ -29,4 +31,8 @@
       color: #888;
     }
   }
+}
+
+.new-button-block {
+  margin-bottom: 10px;
 }

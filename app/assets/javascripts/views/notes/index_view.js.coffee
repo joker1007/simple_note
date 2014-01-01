@@ -16,4 +16,6 @@ s.Views.Notes.IndexView = Backbone.View.extend
       view = new s.Views.Notes.IndexItemView(model: note)
       @$el.append(view.render().el)
     $('#main').html(@el)
+    newButtonView = new s.Views.Notes.NewButtonView()
+    $('#main').prepend(newButtonView.render().el)
     this

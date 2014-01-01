@@ -1,0 +1,9 @@
+%form{role: 'form'}
+  .form-group
+    %label{for: 'input-note-title'} タイトル
+    %input.form-control#input-note-title{type: 'text', name: 'title'}
+  .form-group
+    %label{for: 'input-note-raw_body'} 本文 (Markdown)
+    %textarea.form-control#input-note-raw_body{rows: '20', name: 'raw_body'}
+  .form-group
+    %input.submit-note-form.btn.btn-primary{type: 'submit', value: '送信'}

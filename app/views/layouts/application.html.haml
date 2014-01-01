@@ -6,7 +6,8 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
     :coffee
-      SimpleNote.init()
+      $ ->
+        SimpleNote.init()
 
   %body
     %header.navbar.navbar-inverse.navbar-fixed-top
