@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :notes
+  resources :notes do
+    collection do
+      get :rendering
+    end
+  end
 
   root 'notes#index'
 

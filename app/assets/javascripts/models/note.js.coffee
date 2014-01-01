@@ -8,6 +8,15 @@ s.Models.Note = Backbone.Model.extend
   previewText: (length = 140) ->
     @get("raw_body")?.substring(0, length)
 
+  renderBody: ->
+    $.ajax("/notes/rendering", 
+      type: "GET"
+      dataType: 'json'
+      data: {raw_body: @get('raw_body')}
+    ).done (data) =>
+      @set('body', data)
+      @trigger('renderBody', data)
+
 s.Collections.NoteCollection = Backbone.Collection.extend
   model: s.Models.Note
   url: '/notes'

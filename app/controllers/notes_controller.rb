@@ -1,5 +1,5 @@
 class NotesController < ApplicationController
-  before_action :set_note, only: [:show, :edit, :update, :destroy]
+  before_action :set_note, only: [:show, :edit, :update, :destroy, :body]
 
   # GET /notes
   # GET /notes.json
@@ -10,6 +10,14 @@ class NotesController < ApplicationController
   # GET /notes/1
   # GET /notes/1.json
   def show
+  end
+
+  # GET /notes/rendering
+  # GET /notes/rendering.json
+  def rendering
+    @note = Note.new do |n|
+      n.raw_body = ERB::Util.h(params[:raw_body])
+    end
   end
 
   # GET /notes/new

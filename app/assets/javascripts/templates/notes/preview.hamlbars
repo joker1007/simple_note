@@ -1,0 +1,4 @@
+%h1#note-title
+  {{title}}
+
+#note-body

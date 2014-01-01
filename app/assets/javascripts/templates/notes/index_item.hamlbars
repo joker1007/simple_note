@@ -1,3 +1,4 @@
-%a.note-title{href: '{{url}}'} {{title}}
+%h3
+  %a.note-title{href: '{{url}}'} {{title}}
 .note-preview
   {{previewText}}
