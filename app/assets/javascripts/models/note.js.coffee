@@ -14,7 +14,7 @@ s.Models.Note = Backbone.Model.extend
       dataType: 'json'
       data: {raw_body: @get('raw_body')}
     ).done (data) =>
-      @set('body', data)
+      @set('body', data.body)
       @trigger('renderBody', data)
 
 s.Collections.NoteCollection = Backbone.Collection.extend

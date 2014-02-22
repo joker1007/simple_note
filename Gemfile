@@ -85,6 +85,9 @@ gem 'rails-assets-bootstrap-sass'
 gem 'rails-assets-lodash'
 gem 'rails-assets-backbone'
 gem 'rails-assets-backbone.stickit'
+gem 'rails-assets-chai'
+gem 'rails-assets-chai-jquery'
+gem 'rails-assets-sinonjs'
 
 gem 'handlebars_assets'
 
