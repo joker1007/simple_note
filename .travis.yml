@@ -2,6 +2,13 @@ language: ruby
 rvm:
   - 2.1.0
 
+bundler_args: --without development --deployment
+cache: bundler
+
+before_script:
+  - bundle exec rake db:create
+  - bundle exec rake db:migrate
+
 script:
   - bundle exec rspec spec
   - bundle exec teaspoon
