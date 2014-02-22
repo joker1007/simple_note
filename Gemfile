@@ -7,6 +7,7 @@ gem 'rails', '4.1.0.rc1'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
+gem 'pg' # for heroku
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0.rc1'
