@@ -1,3 +1,5 @@
+ruby "2.1.0"
+
 source 'https://rubygems.org'
 source 'https://rails-assets.org'
 
@@ -8,6 +10,7 @@ gem 'rails', '4.1.0.rc1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 gem 'pg' # for heroku
+gem 'rails_12factor', group: :production # for heroku
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0.rc1'
@@ -23,7 +26,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'haml-rails'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer',  platforms: :ruby
+gem 'therubyracer',  platforms: :ruby, group: :production
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
