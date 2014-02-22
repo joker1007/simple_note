@@ -63,6 +63,8 @@ group :development, :test do
   gem 'byebug'
   gem 'pry-byebug'
   gem "pry-stack_explorer"
+
+  gem "teaspoon"
 end
 
 group :development do
@@ -70,8 +72,6 @@ group :development do
 
   gem "better_errors"
   gem "binding_of_caller"
-
-  gem "teaspoon"
 end
 
 group :test do
