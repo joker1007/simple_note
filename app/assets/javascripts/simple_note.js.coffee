@@ -8,5 +8,4 @@ window.SimpleNote =
   init: ->
     @router = new SimpleNote.Routers.NoteRouter()
     Backbone.history.start(pushState: true)
-    console.log 'init SimpleNote!'
 

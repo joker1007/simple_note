@@ -19,6 +19,5 @@ s.Views.Notes.PreviewView = Backbone.View.extend
 
   render: ->
     @$el.html(@template(@model.toJSON()))
-    @$('#note-body').html(@template(@model.toJSON()))
     @model.trigger('change:raw_body')
     @stickit()
