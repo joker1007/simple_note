@@ -13,7 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sass
-//= require underscore
+//= require lodash
 //= require backbone
 //= require backbone.stickit/backbone.stickit
 //= require handlebars.runtime

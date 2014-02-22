@@ -16,14 +16,14 @@ class Note < ActiveRecord::Base
     def markdown_processor
       @markdown_processor ||= Redcarpet::Markdown.new(
         Redcarpet::Render::HTML.new(
-          filter_html:         true,
-          hard_wrap:           true,
-          fenced_code_blocks:  true,
-          underline:           true,
-          highlight:           true,
+          filter_html:  true,
+          hard_wrap:    true,
         ),
-        autolink:  true,
-        tables:    true,
+        autolink:            true,
+        tables:              true,
+        underline:           true,
+        highlight:           true,
+        fenced_code_blocks:  true,
       )
     end
   end

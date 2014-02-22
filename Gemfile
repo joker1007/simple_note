@@ -3,13 +3,14 @@ source 'https://rails-assets.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.0.beta1'
+gem 'rails', '4.1.0.rc1'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0.rc1'
+gem 'zurui-sass-rails'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -36,6 +37,8 @@ gem 'sdoc',          group: :doc, require: false
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/jonleighton/spring
 gem 'spring',        group: :development
+gem "spring-commands-rspec", group: :development
+gem "spring-commands-cucumber", group: :development
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
@@ -53,19 +56,20 @@ gem 'pry-rails'
 gem 'awesome_print'
 gem 'tapp'
 
-gem 'rails-assets-bootstrap-sass'
-gem 'rails-assets-underscore'
-gem 'rails-assets-backbone'
-gem 'rails-assets-backbone.stickit'
-
-gem 'handlebars_assets'
-
-gem 'redcarpet'
-
 group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'byebug'
+  gem 'pry-byebug'
+  gem "pry-stack_explorer"
+end
+
+group :development do
+  gem 'coffee-rails-source-maps'
+  gem 'xray-rails'
+
+  gem "better_errors"
+  gem "binding_of_caller"
 end
 
 group :test do
@@ -73,3 +77,13 @@ group :test do
   gem 'capybara'
   gem 'poltergeist'
 end
+
+# rails-assets
+gem 'rails-assets-bootstrap-sass'
+gem 'rails-assets-lodash'
+gem 'rails-assets-backbone'
+gem 'rails-assets-backbone.stickit'
+
+gem 'handlebars_assets'
+
+gem 'redcarpet'
