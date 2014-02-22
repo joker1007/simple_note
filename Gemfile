@@ -10,6 +10,7 @@ gem 'sqlite3'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0.rc1'
+gem 'compass-rails'
 gem 'zurui-sass-rails'
 
 # Use Uglifier as compressor for JavaScript assets
@@ -66,7 +67,6 @@ end
 
 group :development do
   gem 'coffee-rails-source-maps'
-  gem 'xray-rails'
 
   gem "better_errors"
   gem "binding_of_caller"
