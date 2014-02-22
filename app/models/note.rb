@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: notes
+#
+#  id         :integer          not null, primary key
+#  title      :string(255)
+#  raw_body   :text
+#  body       :text
+#  created_at :datetime
+#  updated_at :datetime
+#
+
 class Note < ActiveRecord::Base
   concerning :MarkdownRendering do
     included do
