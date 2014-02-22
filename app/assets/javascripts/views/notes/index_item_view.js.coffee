@@ -15,6 +15,10 @@ s.Views.Notes.IndexItemView = Backbone.View.extend
     'click .note-title' : 'navigateToNote'
     'click .delete-note' : 'deleteNote'
 
+  initialize: ->
+    @listenTo @model, 'destroy', =>
+      @remove()
+
   render: ->
     context = @model.toJSON()
     _.extend(context, previewText: @model.previewText())
@@ -28,5 +32,4 @@ s.Views.Notes.IndexItemView = Backbone.View.extend
   deleteNote: (e) ->
     e.preventDefault()
     if confirm('ノートを削除しますか？')
-      @model.destroy().done =>
-        @remove()
+      @model.destroy()
