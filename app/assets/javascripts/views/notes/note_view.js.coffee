@@ -19,7 +19,6 @@ s.Views.Notes.NoteView = Backbone.View.extend
 
   render: ->
     @$el.html(@template(@model.toJSON()))
-    $('#main').html(@el)
     preview = new s.Views.Notes.PreviewView(model: @model, el: @$('.preview-col'))
     preview.render()
     @stickit()

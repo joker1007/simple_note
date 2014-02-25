@@ -10,25 +10,22 @@ s.Routers.NoteRouter = Backbone.Router.extend
     ".*" : "indexNotes"
 
   initialize: (options) ->
+    @layout = new s.Views.LayoutView(el: $("body"))
     @notes = new s.Collections.NoteCollection()
 
   indexNotes: ->
-    @currentView.remove() if @currentView
+    indexView = new s.Views.Notes.IndexView(collection: @notes)
+    @layout.setView(indexView)
 
-    @currentView = new s.Views.Notes.IndexView(collection: @notes)
     @notes.fetch(reset: true)
 
   newNote: ->
-    @currentView.remove() if @currentView
-
     @note = new s.Models.Note()
     @__renderNoteView()
     @listenTo @note, 'sync', =>
       @navigate("notes", true)
 
   showNote: (id) ->
-    @currentView.remove() if @currentView
-
     @note = @notes.get(id)
     if @note
       @__renderNoteView()
@@ -38,7 +35,7 @@ s.Routers.NoteRouter = Backbone.Router.extend
         success: => @__renderNoteView()
 
   __renderNoteView: ->
-    @currentView = new s.Views.Notes.NoteView(model: @note)
+    noteView = new s.Views.Notes.NoteView(model: @note)
+    @layout.setView(noteView)
     @listenTo @currentView, 'clickSubmit', =>
       @note.save()
-    @currentView.render()

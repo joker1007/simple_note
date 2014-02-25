@@ -3,7 +3,6 @@
 chai.should()
 
 describe 'SimpleNote.Views.Notes.NoteView', ->
-  fixture.set('<div id="main"></div>')
   beforeEach ->
     @note = new SimpleNote.Models.Note
       id: 1
@@ -15,11 +14,6 @@ describe 'SimpleNote.Views.Notes.NoteView', ->
       view = new SimpleNote.Views.Notes.NoteView(model: @note)
       view.render()
       view.$el.should.have.class("new-note")
-
-    it "replace #main content with this.el", ->
-      view = new SimpleNote.Views.Notes.NoteView(model: @note)
-      view.render()
-      $(fixture.el).find("#main").should.have(".new-note")
 
     it "render PreviewView", ->
       spy = sinon.spy(SimpleNote.Views.Notes.PreviewView.prototype, "render")

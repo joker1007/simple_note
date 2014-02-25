@@ -4,15 +4,14 @@ chai.should()
 
 describe 'SimpleNote.Views.Notes.IndexView', ->
   describe '#render', ->
-    fixture.set('<div id="main"></div>')
-
     beforeEach ->
       @collection = new SimpleNote.Collections.NoteCollection()
 
-    it 'append this el to #main', ->
+    it 'render el that has ul.notes and a.new-note-btn', ->
       view = new SimpleNote.Views.Notes.IndexView(collection: @collection)
       view.render()
-      $(fixture.el).find("#main").should.have("#notes")
+      view.$el.should.have("ul.notes")
+      view.$el.should.have("a.new-note-btn")
 
     it 'render each item view', ->
       @collection = new SimpleNote.Collections.NoteCollection(
@@ -27,14 +26,6 @@ describe 'SimpleNote.Views.Notes.IndexView', ->
       spy.callCount.should.eq(2)
       spy.restore()
 
-    it 'render NewButtonView', ->
-      collection = new SimpleNote.Collections.NoteCollection()
-      view = new SimpleNote.Views.Notes.IndexView(collection: @collection)
-      spy = sinon.spy(SimpleNote.Views.Notes.NewButtonView.prototype, "render")
-      view.render()
-      spy.callCount.should.eq(1)
-      spy.restore()
-
   describe 'trigger reset of this.collection', ->
     it 're-render', ->
       @collection = new SimpleNote.Collections.NoteCollection()
@@ -43,5 +34,14 @@ describe 'SimpleNote.Views.Notes.IndexView', ->
       view = new SimpleNote.Views.Notes.IndexView(collection: @collection)
       @collection.trigger("reset")
       spy.callCount.should.eq(1)
+      spy.restore()
 
+  describe 'click .new-note-btn', ->
+    it 'navigate to new_note path', ->
+      spy = sinon.spy(Backbone.history, "navigate")
+
+      view = new SimpleNote.Views.Notes.IndexView(collection: @collection)
+      view.render()
+      view.$("a.new-note-btn").click()
+      spy.calledWithExactly("notes/new", true).should.be.true
       spy.restore()
