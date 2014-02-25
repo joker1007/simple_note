@@ -1,6 +1,5 @@
-window.SimpleNote ?=
-  Models: {}
-s = window.SimpleNote
+s = SimpleNote
+s.Views.Notes ?= {}
 
 s.Models.Note = Backbone.Model.extend
   urlRoot: '/notes'
