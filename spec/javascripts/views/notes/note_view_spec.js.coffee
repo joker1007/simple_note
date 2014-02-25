@@ -38,4 +38,5 @@ describe 'SimpleNote.Views.Notes.NoteView', ->
       view.render()
       view.$(".back").click()
       spy.calledWithExactly("notes", true).should.be.true
+      spy.restore()
 
