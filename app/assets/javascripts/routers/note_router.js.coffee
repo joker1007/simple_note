@@ -1,6 +1,6 @@
-window.SimpleNote ?=
+SimpleNote ?=
   Routers: {}
-s = window.SimpleNote
+s = SimpleNote
 
 s.Routers.NoteRouter = Backbone.Router.extend
   routes:
