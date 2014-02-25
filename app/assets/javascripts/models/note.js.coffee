@@ -1,5 +1,5 @@
-s = SimpleNote
-s.Views.Notes ?= {}
+s = @SimpleNote
+s.Models ?= {}
 
 s.Models.Note = Backbone.Model.extend
   urlRoot: '/notes'

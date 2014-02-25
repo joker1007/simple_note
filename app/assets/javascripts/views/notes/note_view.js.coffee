@@ -1,6 +1,6 @@
 #= require_tree ../../templates
 
-s = SimpleNote
+s = @SimpleNote
 s.Views.Notes ?= {}
 
 s.Views.Notes.NoteView = Backbone.View.extend

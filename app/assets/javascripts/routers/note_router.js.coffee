@@ -1,6 +1,5 @@
-SimpleNote ?=
-  Routers: {}
-s = SimpleNote
+s = @SimpleNote
+s.Routers ?= {}
 
 s.Routers.NoteRouter = Backbone.Router.extend
   routes:

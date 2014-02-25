@@ -1,6 +1,11 @@
+#= require_self
+#= require_tree ./routers
+#= require_tree ./models
+#= require_tree ./views
+
 'use strict'
 
-window.SimpleNote =
+@SimpleNote =
   Models: {}
   Collections: {}
   Views: {}

@@ -1,4 +1,4 @@
-s = window.SimpleNote
+s = @SimpleNote
 s.Views ?= {}
 
 s.Views.LayoutView = Backbone.View.extend
