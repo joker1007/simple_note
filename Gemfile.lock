@@ -158,12 +158,9 @@ GEM
     rails-assets-backbone (1.1.1)
       rails-assets-underscore (>= 1.5.0)
     rails-assets-backbone.stickit (0.7.0)
-    rails-assets-bootstrap-sass (3.0.2)
-      rails-assets-jquery (>= 1.9.0)
     rails-assets-chai (1.9.0)
     rails-assets-chai-jquery (1.2.1)
     rails-assets-highlightjs (8.0.0)
-    rails-assets-jquery (2.1.0)
     rails-assets-lodash (2.4.1)
     rails-assets-sinonjs (1.7.3)
     rails-assets-underscore (1.6.0)
@@ -277,7 +274,6 @@ DEPENDENCIES
   rails (= 4.1.0.rc1)
   rails-assets-backbone
   rails-assets-backbone.stickit
-  rails-assets-bootstrap-sass
   rails-assets-chai
   rails-assets-chai-jquery
   rails-assets-highlightjs

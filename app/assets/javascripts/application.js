@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap-sass
 //= require lodash
 //= require backbone
 //= require backbone.stickit/backbone.stickit

@@ -94,7 +94,6 @@ gem 'redcarpet'
 
 gem 'bootstrap-sass'
 # rails-assets
-gem 'rails-assets-bootstrap-sass'
 gem 'rails-assets-lodash'
 gem 'rails-assets-backbone'
 gem 'rails-assets-backbone.stickit'
