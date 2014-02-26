@@ -21,8 +21,9 @@ s.Routers.NoteRouter = Backbone.Router.extend
   newNote: ->
     @note = new s.Models.Note()
     @__renderNoteView()
-    @listenTo @note, 'sync', =>
+    @listenTo @note, 'sync', (note) =>
       @navigate("notes", true)
+      @stopListening(note)
 
   showNote: (id) ->
     @note = @notes.get(id)
@@ -36,5 +37,5 @@ s.Routers.NoteRouter = Backbone.Router.extend
   __renderNoteView: ->
     noteView = new s.Views.Notes.NoteView(model: @note)
     @layout.setView(noteView)
-    @listenTo @currentView, 'clickSubmit', =>
+    @listenTo @layout.currentView, 'clickSubmit', =>
       @note.save()

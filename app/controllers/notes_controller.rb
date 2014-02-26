@@ -16,7 +16,7 @@ class NotesController < ApplicationController
   # GET /notes/rendering.json
   def rendering
     @note = Note.new do |n|
-      n.raw_body = ERB::Util.h(params[:raw_body])
+      n.raw_body = params[:raw_body]
     end
   end
 

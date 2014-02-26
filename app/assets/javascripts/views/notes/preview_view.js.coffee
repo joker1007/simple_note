@@ -13,6 +13,8 @@ s.Views.Notes.PreviewView = Backbone.View.extend
       update: _.debounce(($el, val, model, options) =>
           model.renderBody().done (data) ->
             $el.html(data.body)
+            $("code").each (i, e) ->
+              hljs.highlightBlock(e)
       , 400)
 
   render: ->
