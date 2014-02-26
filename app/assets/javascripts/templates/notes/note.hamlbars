@@ -1,5 +1,5 @@
 %p
-  %a.back.btn.btn-default{href: '/notes'} ノート一覧に戻る
+  %a.back.btn.btn-default{href: '/notes'} &laquo; ノート一覧に戻る
 .row
   .form-col.col-lg-6
     %form{role: 'form'}
