@@ -88,15 +88,17 @@ group :test do
   gem 'poltergeist'
 end
 
+gem 'handlebars_assets'
+
+gem 'redcarpet'
+
+gem 'bootstrap-sass'
 # rails-assets
 gem 'rails-assets-bootstrap-sass'
 gem 'rails-assets-lodash'
 gem 'rails-assets-backbone'
 gem 'rails-assets-backbone.stickit'
+gem 'rails-assets-highlightjs'
 gem 'rails-assets-chai'
 gem 'rails-assets-chai-jquery'
 gem 'rails-assets-sinonjs'
-
-gem 'handlebars_assets'
-
-gem 'redcarpet'
