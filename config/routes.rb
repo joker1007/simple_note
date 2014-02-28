@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :notes do
     collection do
-      get :rendering
+      post :rendering
     end
   end
 

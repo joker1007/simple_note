@@ -8,16 +8,16 @@ s.Views.Notes.PreviewView = Backbone.View.extend
 
   bindings:
     '#note-title' : 'title'
-    '#note-body' :
-      observe: 'raw_body'
-      update: _.debounce(($el, val, model, options) =>
-          model.renderBody().done (data) ->
-            $el.html(data.body)
-            $("code").each (i, e) ->
-              hljs.highlightBlock(e)
-      , 400)
+
+  initialize: ->
+    @listenTo @model, 'change:body', _.bind(@_updatePreview, @)
 
   render: ->
     @$el.html(@template(@model.toJSON()))
-    @model.trigger('change:raw_body')
+    @_updatePreview()
     @stickit()
+
+  _updatePreview: ->
+    @$('#note-body').html(@model.get("body"))
+    @$("code").each (i, e) ->
+      hljs.highlightBlock(e)
