@@ -26,13 +26,3 @@ describe 'SimpleNote.Models.Note',  ->
       note.renderBody()
       @requests[0].respond(200, {"Content-Type": "application/json"}, '{"body": "<h2>head2</h2>"}')
       note.get("body").should.eq("<h2>head2</h2>")
-
-    it 'trigger "renderBody" event', ->
-      note = new SimpleNote.Models.Note(raw_body: "## head2")
-      spy = sinon.spy()
-      note.on "renderBody", spy
-      note.renderBody()
-      @requests[0].respond(200, {"Content-Type": "application/json"}, '{"body": "<h2>head2</h2>"}')
-      spy.called.should.be.true
-
-
