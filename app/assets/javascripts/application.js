@@ -17,5 +17,6 @@
 //= require backbone.stickit/backbone.stickit
 //= require handlebars.runtime
 //= require highlightjs
+//= require notifyjs/notify-combined
 //= require simple_note
 //= require_tree .

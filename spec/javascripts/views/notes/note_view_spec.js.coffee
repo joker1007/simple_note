@@ -40,3 +40,18 @@ describe 'SimpleNote.Views.Notes.NoteView', ->
       spy.calledWithExactly("notes", true).should.be.true
       spy.restore()
 
+  describe 'model synced', ->
+    it 'notifies success message', ->
+      view = new SimpleNote.Views.Notes.NoteView(model: @note)
+      view.render()
+      view.$el.should.not.have.text("Success!")
+      @note.trigger('sync')
+      view.$el.should.have.contain("Success!")
+
+  describe 'model errord', ->
+    it 'notifies success message', ->
+      view = new SimpleNote.Views.Notes.NoteView(model: @note)
+      view.render()
+      view.$el.should.not.have.text("Error!")
+      @note.trigger('error')
+      view.$el.should.have.contain("Error!")
