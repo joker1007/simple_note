@@ -35,16 +35,16 @@ describe "Notes" do
     end
   end
 
-  describe "GET /notes/:id/body" do
+  describe "GET /notes/:id/rendering" do
     let!(:note) { FactoryGirl.create(:note) }
 
     it "should return success" do
-      get rendering_notes_path, format: :json, raw_body: note.raw_body
+      post rendering_notes_path, format: :json, raw_body: note.raw_body
       expect(response.status).to be(200)
     end
 
     it "should return note json" do
-      get rendering_notes_path, format: :json, raw_body: note.raw_body
+      post rendering_notes_path, format: :json, raw_body: note.raw_body
       res = ActiveSupport::JSON.decode(response.body)
       expect(res).to be_a(Hash)
       expect(res['body']).to eq(note.render_markdown)
