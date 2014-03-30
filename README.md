@@ -1,28 +1,34 @@
-== README
+# Simple Note
+RailsとBackboneを利用したサンプルとして作成した簡単なメモアプリケーションです。
+Markdown形式で記述したメモを、ほぼリアルタイムでプレビューしながら編集することができます。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Versions
+| Name        | Version   |
+| ---         | ---       |
+| Ruby        | 2.1.1     |
+| Rails       | 4.1.0.rc1 |
+| Backbone.js | 1.1.2     |
 
-Things you may want to cover:
+# Requirements
 
-* Ruby version
+- SQLite
+- PostgresSQL (For Heroku)
 
-* System dependencies
+## Usage
 
-* Configuration
+```sh
+$ git clone https://github.com/joker1007/simple_note
+$ cd simple_note
+$ bundle install --path vendor/bundle
+$ bundle exec rake db:migrate
+$ bundle exec rails s
+```
 
-* Database creation
+## Heroku
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+```sh
+$ git clone https://github.com/joker1007/simple_note
+$ cd simple_note
+$ heroku apps:create
+$ git push heroku master
+```
