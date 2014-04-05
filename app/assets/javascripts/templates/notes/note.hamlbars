@@ -1,7 +1,7 @@
 %p
   %a.back.btn.btn-default{href: '/notes'} &laquo; ノート一覧に戻る
 .row
-  .form-col.col-lg-6
+  .form-col.col-md-5
     %form{role: 'form'}
       .form-group
         %label{for: 'input-note-title'} タイトル
@@ -11,4 +11,4 @@
         %textarea.form-control#input-note-raw_body{rows: '20', name: 'note[raw_body]'} {{raw_body}}
       .form-group
         %input.submit-note-form.btn.btn-primary{type: 'submit', value: '送信'}
-  .preview-col.col-lg-6
+  .preview-col.col-md-6
